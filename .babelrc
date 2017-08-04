@@ -1,0 +1,18 @@
+{
+  "presets": [
+    "react",
+    "es2015",
+    "stage-0"
+  ],
+  "plugins": [
+    [
+      // 自动加载css样式文件
+      // `style: true` 会加载 less 文件
+      "import",
+      {
+        "libraryName": "antd",
+        "style": "css"
+      }
+    ]
+  ]
+}
