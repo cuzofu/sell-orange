@@ -11,11 +11,14 @@ import * as TodoActions from "./javascript/reduxtodo/actions/action";
 {/*<Provider store={store}>*/}
 {/*<Index />*/}
 {/*</Provider>,*/}
+// let store = createStore(todoApp);
+
+// 每次state更新时，打印日志
+// let unSubscribe = store.subscribe(() => {
+//     console.log(store.getState())
+// });
+
 ReactDOM.render(
     <TodoContainer/>,
     document.getElementById('content')
 );
-
-TodoActions.addTodo('My first task');
-TodoActions.addTodo('Another task');
-TodoActions.addTodo('Finish this tutorial');
