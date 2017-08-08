@@ -2,10 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import {DatePicker, message} from 'antd';
 
 import { connect } from 'react-redux';
-import { addTodo, completeTodo, setVisibilityFilter, VisibilityFilters } from './Actions/action';
-import AddTodo from './todolist/AddTodo';
-import TodoList from './todolist/TodoList';
-import Footer from './todolist/Footer';
+import { addTodo, completeTodo, setVisibilityFilter, VisibilityFilters } from './actions/action';
+import AddTodo from './views/AddTodo';
+import TodoList from './views/TodoList';
+import Footer from './views/Footer';
 
 class Index extends Component {
     constructor(props) {
