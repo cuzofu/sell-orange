@@ -5,6 +5,7 @@ const ENTER_KEY_CODE = 13;
 function TodoView(props) {
     return (
         <div style={{width: 400, margin: '100px auto'}}>
+            <h1>Flux Todo List</h1>
             <Header {...props} />
             <Main {...props} />
             <Footer {...props} />

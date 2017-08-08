@@ -28,6 +28,7 @@ class Index extends Component {
         const { dispatch, visibleTodos, visibilityFilter } = this.props;
         return (
             <div style={{width: 400, margin: '100px auto'}}>
+                <h1>Redex Todo List</h1>
                 <DatePicker onChange={value => this.handleChange(value)}/>
                 <div style={{marginTop: 20}}>当前日期：{this.state.date.toString()}</div>
                 <div>
