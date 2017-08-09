@@ -6,7 +6,7 @@ const TodoList = require("./TodoList");
 const Container = React.createClass({
     render() {
         return (
-            <div style={{width: 400, margin: '100px auto'}}>
+            <div>
                 <h1>Reflux Todo List</h1>
                 <AddTodo todos={this.props.todos} />
                 <TodoList todos={this.props.todos} />

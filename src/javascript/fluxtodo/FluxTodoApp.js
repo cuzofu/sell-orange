@@ -1,10 +1,10 @@
 import {Container} from 'flux/utils';
 
-import TodoStore from "../stores/TodoStore";
-import TodoView from "../components/TodoView";
-import TodoAction from "../actions/TodoAction";
-import TodoDraftStore from "../stores/TodoDraftStore";
-import TodoEditStore from "../stores/TodoEditStore";
+import TodoStore from "./stores/TodoStore";
+import TodoView from "./components/TodoView";
+import TodoAction from "./actions/TodoAction";
+import TodoDraftStore from "./stores/TodoDraftStore";
+import TodoEditStore from "./stores/TodoEditStore";
 
 function getStores() {
     return [

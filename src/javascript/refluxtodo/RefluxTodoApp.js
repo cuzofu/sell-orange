@@ -1,10 +1,10 @@
 import React from 'react';
 import Reflux from 'reflux';
 
-const TodoContainer = require('./Container');
-const TodoStore = require('../stores/Stores');
+const TodoContainer = require('./views/Container');
+const TodoStore = require('./stores/Stores');
 
-const App = React.createClass({
+export default React.createClass({
     mixins: [Reflux.connect(TodoStore, "list")],
     render() {
         return (
@@ -12,5 +12,3 @@ const App = React.createClass({
         );
     }
 });
-
-module.exports = App;

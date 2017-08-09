@@ -1,28 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import TodoContainer from "./javascript/fluxtodo/containers/TodoContainer";
+import {render} from 'react-dom';
+import {BrowserRouter, Route, Link, Redirect} from 'react-router-dom'
 
-import Index from './javascript/reduxtodo/index'
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import todoApp from './javascript/reduxtodo/reducers/reducer';
+import FluxTodoApp from "./javascript/fluxtodo/FluxTodoApp";
+import RefluxTodoApp from './javascript/refluxtodo/RefluxTodoApp';
+import ReduxTodoApp from './javascript/reduxtodo/ReduxTodoApp';
 
-const RefluxTodoApp = require('./javascript/refluxtodo/views/App');
-
-let store = createStore(todoApp);
-
-// 每次state更新时，打印日志
-let unSubscribe = store.subscribe(() => {
-    console.log(store.getState())
-});
-
-ReactDOM.render(
-    <div>
-        <Provider store={store}>
-            <Index />
-        </Provider>
-        <TodoContainer />
-        <RefluxTodoApp />
-    </div>,
+render(
+    (<BrowserRouter>
+        <div style={{width: 400, margin: '100px auto'}}>
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/redux">Redux</Link></li>
+                <li><Link to="/flux">Flux</Link></li>
+                <li><Link to="/reflux">Reflux</Link></li>
+            </ul>
+            <hr/>
+            <Route exact path="/" component={FluxTodoApp} />
+            <Route path="/redux" component={ReduxTodoApp} />
+            <Route path="/flux" component={FluxTodoApp} />
+            <Route path="/reflux" component={RefluxTodoApp} />
+        </div>
+    </BrowserRouter>),
     document.getElementById('content')
 );

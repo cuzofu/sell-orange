@@ -2,10 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import {DatePicker, message} from 'antd';
 
 import { connect } from 'react-redux';
-import { addTodo, completeTodo, setVisibilityFilter, VisibilityFilters } from './actions/action';
-import AddTodo from './views/AddTodo';
-import TodoList from './views/TodoList';
-import Footer from './views/Footer';
+import { addTodo, completeTodo, setVisibilityFilter, VisibilityFilters } from '../actions/action';
+import AddTodo from './ADDTODO';
+import TodoList from './TODOLIST';
+import Footer from './FOOTER';
 
 class Index extends Component {
     constructor(props) {
@@ -27,7 +27,7 @@ class Index extends Component {
     render() {
         const { dispatch, visibleTodos, visibilityFilter } = this.props;
         return (
-            <div style={{width: 400, margin: '100px auto'}}>
+            <div>
                 <h1>Redex Todo List</h1>
                 <DatePicker onChange={value => this.handleChange(value)}/>
                 <div style={{marginTop: 20}}>当前日期：{this.state.date.toString()}</div>

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 const ENTER_KEY_CODE = 13;
 function TodoView(props) {
     return (
-        <div style={{width: 400, margin: '100px auto'}}>
+        <div>
             <h1>Flux Todo List</h1>
             <Header {...props} />
             <Main {...props} />
