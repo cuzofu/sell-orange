@@ -7,7 +7,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import todoApp from './javascript/reduxtodo/reducers/reducer';
 
-import App from './javascript/refluxtodo/views/App'
+const RefluxTodoApp = require('./javascript/refluxtodo/views/App');
 
 let store = createStore(todoApp);
 
@@ -21,8 +21,8 @@ ReactDOM.render(
         <Provider store={store}>
             <Index />
         </Provider>
-        <TodoContainer/>
-        <App/>
+        <TodoContainer />
+        <RefluxTodoApp />
     </div>,
     document.getElementById('content')
 );
