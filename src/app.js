@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Link, Redirect} from 'react-router-dom'
 import FluxTodoApp from "./javascript/fluxtodo/FluxTodoApp";
 import RefluxTodoApp from './javascript/refluxtodo/RefluxTodoApp';
 import ReduxTodoApp from './javascript/reduxtodo/ReduxTodoApp';
+import HigherOrderComponentApp from './javascript/react/HigherOrderComponentApp';
 
 render(
     (<BrowserRouter>
@@ -14,12 +15,14 @@ render(
                 <li><Link to="/redux">Redux</Link></li>
                 <li><Link to="/flux">Flux</Link></li>
                 <li><Link to="/reflux">Reflux</Link></li>
+                <li><Link to="/react">React</Link></li>
             </ul>
             <hr/>
             <Route exact path="/" component={FluxTodoApp} />
             <Route path="/redux" component={ReduxTodoApp} />
             <Route path="/flux" component={FluxTodoApp} />
             <Route path="/reflux" component={RefluxTodoApp} />
+            <Route path="/react" component={HigherOrderComponentApp} />
         </div>
     </BrowserRouter>),
     document.getElementById('content')
